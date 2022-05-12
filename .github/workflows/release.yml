@@ -1,4 +1,4 @@
-name: GitHub Actions Demoa
+name: Release Build
 on:
   workflow_dispatch:
     inputs:
@@ -91,7 +91,6 @@ jobs:
         run: |
           mkdir apks
           find artifacts -name "*.apk" -exec cp {} apks \;
-
           function upload() {
             for apk in $@; do
               echo ">> Uploading $apk"
