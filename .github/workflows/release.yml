@@ -57,7 +57,7 @@ jobs:
   publish:
     name: Publish Release
     if: github.event.inputs.publish != 'y'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     needs: build
     steps:
       - name: Checkout
@@ -79,7 +79,7 @@ jobs:
   upload:
     name: Upload Release
     if: github.event.inputs.upload != 'y'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     needs: build
     steps:
       - name: Donwload Artifacts
