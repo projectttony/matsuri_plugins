@@ -1,4 +1,4 @@
-name: Release Build
+name: GitHub Actions Demoa
 on:
   workflow_dispatch:
     inputs:
